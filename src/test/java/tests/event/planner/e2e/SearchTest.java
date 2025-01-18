@@ -39,6 +39,20 @@ public class SearchTest {
     }
 
     @Test
+    public void testTotalNumberOfEvents() {
+        int totlalEventCount = 0;
+        for(int i=0;i<3;i++) {
+            int nextPageCount = searchPage.getEventCount();
+            searchPage.nextPage();
+            totlalEventCount += nextPageCount;
+        }
+        int lastPageCount = searchPage.getEventCount();
+        totlalEventCount+=lastPageCount;
+        Assertions.assertEquals(10, totlalEventCount, "There should be 10 events");
+
+    }
+
+    @Test
     public void testEventSortingByTitle() {
         int initialEvents = searchPage.getEventCount();
         Assertions.assertNotEquals(0, initialEvents, "Initial events should be present");
@@ -80,6 +94,7 @@ public class SearchTest {
                 "Events should be sorted by description in ascending order");
         Helper.takeScreenshoot(driver, "sort_by_description");
     }
+
 
 
 
@@ -252,12 +267,13 @@ public class SearchTest {
         filterPanel.applyFilters();
 
         // Take screenshot after reset
-        Helper.takeScreenshoot(driver, "after_reset_filters");
+
 
         int resetCount = searchPage.getEventCount();
 
         Assertions.assertTrue(resetCount > filteredCount,
                 "Event count should increase after resetting filters");
+        Helper.takeScreenshoot(driver, "after_reset_filters");
     }
 
     @Test
@@ -297,13 +313,14 @@ public class SearchTest {
         filterPanel.resetFilters();
         filterPanel.applyFilters();
 
-        Helper.takeScreenshoot(driver, "after_reset_with_search");
+
 
         // Verify that search results are still filtered by search term
         // but not by the reset filters
         int eventCount = searchPage.getEventCount();
         Assertions.assertTrue(eventCount > 0,
                 "Should still show results matching search term after filter reset");
+        Helper.takeScreenshoot(driver, "after_reset_with_search");
     }
 
     @AfterAll
