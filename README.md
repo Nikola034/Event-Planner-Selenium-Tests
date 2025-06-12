@@ -9,8 +9,8 @@ Automated end-to-end testing suite for the **EventPlanner** platform using Selen
 This repository contains comprehensive Selenium tests covering all core functionalities of the EventPlanner application to ensure stability and quality across all user roles and features.
 
 See also:  
-- [Backend Repository](https://github.com/Nikola034/Event-Planner-Backend)  
-- [Frontend Repository](https://github.com/Nikola034/Event-Planner-Frontend) 
+- [EventPlanner Backend](https://github.com/Nikola034/Event-Planner-Backend)  
+- [EventPlanner Frontend](https://github.com/Nikola034/Event-Planner-Frontend) 
 
 ---
 
