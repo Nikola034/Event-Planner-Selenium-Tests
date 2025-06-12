@@ -23,6 +23,17 @@ See also:
 
 ---
 
+<a name="team--collaboration"></a>
+## 🤝 Team & Collaboration
+
+- Developed collaboratively by a team of **3 members**
+- Worked in agile sprints with clearly defined roles and responsibilities
+- Used **Trello** for task management, sprint planning, and retrospectives
+- Maintained high code quality through **pull requests**, **code reviews**, and team discussions
+- Initial designs and workflows were created and shared in **Figma**
+
+---
+
 ## 👨‍💻 My Contributions
 
 - Developed and maintained automated Selenium tests for **CRUD operations on events**  
